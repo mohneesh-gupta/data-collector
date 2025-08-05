@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Submissions</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <%- include("includes/navbar") %> <!-- Include the navbar layout -->
+  
+  <div class="outerBox">
+    <h1>All Form Submissions</h1>
+
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% entries.forEach(entry => { %>
+          <tr>
+            <td><%= entry.email %></td>
+            <td><%= entry.name %></td>
+            <td><%= entry.mobile %></td>
+            <td>
+              <form action="/entry/<%=entry._id%>" method="GET">
+                <button type="submit">see this</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <br />
+    <form action="/gotohome" method="GET">
+        <button type="submit">Go to Home</button>
+    </form>
+  </div>
+</body>
+</html>

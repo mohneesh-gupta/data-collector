@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <%- include("includes/navbar") %> <!-- Include the navbar layout -->
+
+    <div class="outerBox">
+        <h2>data registered successfully</h2>
+        <p>Thank you for submitting your information!</p>
+        <form action="/gotohome" method="GET">
+            <button type="submit">Go to Home</button>
+        </form>
+        <br>
+        <form action="/all" method="GET">
+            <button type="submit">Go to All listings</button>
+        </form>
+    </div>
+    
+</body>
+</html>

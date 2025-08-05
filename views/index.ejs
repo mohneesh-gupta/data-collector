@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome page</title>
+  <link rel="stylesheet" href="/style.css" /> <!-- This path works because of express.static() -->
+</head>
+<body>
+<%- include("includes/navbar") %> <!-- Include the navbar layout -->
+
+  <div class="outerBox">
+    <h1>Welcome to Test Website</h1>
+
+    <!-- <form action="/forms" method="POST"> -->
+    <form class="main-form" action="/forms" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <input type="text" name="name" placeholder="Enter your name" required />
+      <input type="tel" name="mobile" placeholder="Enter your mobile number" required />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <br />
+
+     <form class="singleButton" action="/all" method="GET">
+        <button type="submit">Go to All listings</button>
+    </form>
+
+  </div>
+
+ 
+</body>
+</html>
